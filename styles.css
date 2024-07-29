@@ -1,0 +1,210 @@
+html {
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 15px; /* Ensure some padding on small screens */
+}
+
+.calender-page {
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 10% 10% 30% 10%;
+    height: 80vh;
+    width: 90vh;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prompt {
+    color: #716f6f;
+    font-size: 10px;
+    font-style: bold;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    margin-right: 70px;
+    margin-left: 22px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: row; /* Arrange -- and labels in a row */
+    align-items: center; /* Align items vertically in the center */
+    margin: 0;
+    padding: 0;
+}
+
+.blank {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 700;
+    color: hsl(259, 100%, 65%);
+    margin-right: 4px; /* Space between -- and the label */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+
+.output {
+    margin-right: 0;
+    margin-left: 50px;
+    font-size: 45px; /* Adjust font size for labels */
+    font-style: italic;
+    font-weight: 700;
+    color: black; /* Color for the labels */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arrow {
+    display: block;
+    align-items: flex-end;
+}
+
+.arrow-icon {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-left: 380px;
+    transform: rotate(90deg);
+}
+
+.input-box {
+    font-size: 16px;
+    font-weight: 900;
+    font-style: bold;
+    height: 25px;
+    margin-left: 20px;
+    width: 75px;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccc; /* thin grey border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    outline: none; /* removes default outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* smooth transition */
+}
+
+.input-box-empty {
+    border: 1px solid hsl(0, 100%, 67%);
+}
+
+.prompt-empty {
+    color: hsl(0, 100%, 67%);
+}
+
+.invalid-area {
+    color: hsl(0, 100%, 67%);
+    font-size: 9px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    margin-right: 70px;
+    margin-left: 22px;
+}
+
+.input-box::placeholder {
+    color: #716f6f;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .calender-page {
+        width: 90vw; /* Use viewport width for smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .arrow-icon {
+        margin-left: 0; /* Center arrow icon on smaller screens */
+    }
+
+    .prompt {
+        font-size: 12px; /* Increase font size for readability */
+        margin-right: 20px; /* Reduce margin */
+        margin-left: 10px; /* Reduce margin */
+    }
+
+    .blank {
+        font-size: 36px; /* Adjust font size */
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .output {
+        font-size: 24px; /* Adjust font size */
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .bottom {
+        flex-direction: column; /* Stack time containers vertically */
+    }
+
+    .time-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        margin-bottom: 10px; /* Space between containers */
+    }
+
+    .invalid-area {
+        font-size: 12px; /* Adjust font size */
+        margin-right: 20px; /* Adjust margin */
+        margin-left: 10px; /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .calender-page {
+        width: 100vw; /* Full width on very small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .arrow-icon {
+        height: 50px; /* Adjust size */
+        width: 50px; /* Adjust size */
+    }
+
+    .prompt {
+        font-size: 14px; /* Adjust font size */
+        margin-right: 10px; /* Adjust margin */
+        margin-left: 5px; /* Adjust margin */
+    }
+
+    .blank {
+        font-size: 28px; /* Adjust font size */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .output {
+        font-size: 20px; /* Adjust font size */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .bottom {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .time-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        margin-bottom: 5px; /* Space between containers */
+    }
+
+    .invalid-area {
+        font-size: 14px; /* Adjust font size */
+        margin-right: 10px; /* Adjust margin */
+        margin-left: 5px; /* Adjust margin */
+    }
+}
